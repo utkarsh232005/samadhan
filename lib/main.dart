@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
+import 'report_issue_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Samadhan',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF667eea)),
         useMaterial3: true,
       ),
       home: const WelcomeScreen(),
+      routes: {
+        '/report': (context) => const ReportIssuePage(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }
